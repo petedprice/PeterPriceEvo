@@ -1,18 +1,16 @@
-# Peter Price — evolutionary genomics site
+# Your evolutionary biology site
 
-A single-page site (`index.html`, no build step) ready for GitHub Pages, plus your CV
-(`Peter_Price_CV.pdf`) which the "CV (PDF)" link in the Contact section points to.
+A single-page site (`index.html`, no build step) ready for GitHub Pages.
 
-## 1. Check the content
+## 1. Customize the content
 
-The site is already filled in with your real bio, research areas, publications (from your CV
-and Google Scholar), talks/training, and contact links. Skim through `index.html` and update
-anything that changes — new papers, talks, or affiliation — by editing the relevant section
-directly (each is clearly marked with an HTML comment-free block: About, Research, Publications,
-Talks & training, Contact).
-
-If you'd rather swap the CV file, just replace `Peter_Price_CV.pdf` with a new PDF of the same
-filename (or update the link in the Contact section if you rename it).
+Open `index.html` and edit:
+- Your name (in the header `.brand` and the hero heading)
+- The hero paragraph, About section, and the "field-list" facts (position, institution, PhD year, focal system, methods)
+- The three research cards in the Research section
+- The Publications list (title, authors, journal, and the `href="#"` links — point them at your real paper/data/code links)
+- Field notes (or delete the section if you don't want it)
+- Contact links: replace `mailto:you@university.edu` and the `#` links with your real email, Google Scholar, GitHub, etc.
 
 ## 2. Put it on GitHub
 
