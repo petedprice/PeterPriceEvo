@@ -1,50 +1,30 @@
 # Peter Price — evolutionary genomics site
 
-A single-page site (`index.html`, no build step) ready for GitHub Pages, plus your CV
-(`Peter_Price_CV.pdf`) which the "CV (PDF)" link in the Contact section points to.
+A multi-page site, no build step, ready for GitHub Pages.
 
-## 1. Check the content
+## Files
 
-The site is already filled in with your real bio, research areas, publications (from your CV
-and Google Scholar), talks/training, and contact links. Skim through `index.html` and update
-anything that changes — new papers, talks, or affiliation — by editing the relevant section
-directly (each is clearly marked with an HTML comment-free block: About, Research, Publications,
-Talks & training, Contact).
+- `index.html` — Home: brief intro, About, Contact
+- `research.html` — Research areas, Talks & training
+- `publications.html` — Full publication list
+- `styles.css` — shared stylesheet used by all three pages
+- `Peter_Price_CV.pdf` — your CV, linked from the footer/contact on every page
 
-If you'd rather swap the CV file, just replace `Peter_Price_CV.pdf` with a new PDF of the same
-filename (or update the link in the Contact section if you rename it).
+## Editing content
 
-## 2. Put it on GitHub
+Each page is plain HTML — open the relevant file and edit the text directly. Shared styling
+(colours, fonts, layout) lives in `styles.css`, so changing it there updates all three pages
+at once. Navigation and footer contact links are duplicated across the three HTML files
+(there's no templating), so if you add/rename a page, update the `<nav>` block and the footer
+`<p>` in all three files to match.
+
+## Publish / update on GitHub
 
 ```bash
-# from inside this folder
-git init
+# from inside this folder, after replacing the old files with these
 git add .
-git commit -m "Initial site"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git
-git push -u origin main
+git commit -m "Split site into separate pages"
+git push
 ```
 
-Two options for the repo name:
-
-- **`YOUR-USERNAME.github.io`** → site is live instantly at `https://YOUR-USERNAME.github.io`
-- **Any other repo name** (e.g. `evo-bio-site`) → go to the repo's **Settings → Pages**, set
-  Source = "Deploy from a branch", Branch = `main` / `root`, and save. Site will be live at
-  `https://YOUR-USERNAME.github.io/evo-bio-site/`
-
-Either way, it can take a minute or two for the first deploy to go live.
-
-## 3. Custom domain (optional)
-
-If you have your own domain (e.g. from a university or a registrar), add a file named `CNAME`
-containing just your domain, and point your domain's DNS at GitHub Pages per
-[GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
-
-## Notes
-
-- Everything is in one file (`index.html`) with inline CSS — no build tools, no dependencies
-  beyond two Google Fonts loaded via `<link>`.
-- It's responsive (check the mobile nav toggle) and keyboard-focusable.
-- To add more pages (e.g. a full CV page or per-paper pages), just add more `.html` files and
-  link to them from the nav.
+Since the repo is already set up and pushed once, this just updates what's live.

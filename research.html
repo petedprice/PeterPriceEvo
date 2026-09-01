@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Peter Price</title>
+<meta name="description" content="Research on sex-linked inversions, meiotic drive, and selection on gene expression.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <div class="brand">Peter Price</div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <div class="tag">Research</div>
+    <h1>How conflict between the sexes shapes genomes.</h1>
+    <p>Three threads run through my current work, spanning sex chromosomes, single-cell biology, and methods for detecting selection.</p>
+  </div>
+
+  <section id="research" style="border-top:none; padding-top:24px;">
+    <div class="wrap">
+      <div class="specimens">
+        <div class="specimen">
+          <div class="epithet">Taeniopygia guttata</div>
+          <h3>Sex-linked inversions</h3>
+          <p>Tracing the molecular evolution of a sex-linked inversion polymorphism in zebra finches, and what it reveals about the maintenance of genetic variation on sex chromosomes.</p>
+        </div>
+        <div class="specimen">
+          <div class="epithet">Teleopsis dalmanni</div>
+          <h3>Meiotic drive</h3>
+          <p>Using single-cell approaches to characterise the consequences of X-linked meiotic drive in stalk-eyed flies, work grounded in fieldwork collecting samples in Peninsula Malaysia.</p>
+        </div>
+        <div class="specimen">
+          <div class="epithet">Comparative genomics</div>
+          <h3>Selection on gene expression</h3>
+          <p>Developing and applying methods to detect signatures of selection on gene expression, and mapping the genomic architecture of sexual conflict more broadly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Talks &amp; training</h2>
+        <p>A selection of recent conference talks, training courses, and awards.</p>
+      </div>
+      <div class="notes">
+        <div class="note">
+          <div class="date">Talks</div>
+          <h3>Conference presentations</h3>
+          <p>EMBO Selfish Elements (2026), PopGroup (2026, 2024), ESEB (2025, 2022), EMPSEB (2022).</p>
+        </div>
+        <div class="note">
+          <div class="date">Training</div>
+          <h3>Courses completed</h3>
+          <p>Physalia — Network Analysis in R. NEOF — Unlock the Power of eDNA with DADA2.</p>
+        </div>
+        <div class="note">
+          <div class="date">Grants</div>
+          <h3>Awards</h3>
+          <p>AGA EECG Research Award 2022 ($5,995). Genetics Society ESEB travel grant 2022 (£750).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 12px;">
+      <a href="mailto:petedprice@gmail.com">petedprice@gmail.com</a> ·
+      <a href="https://scholar.google.com/citations?user=s4U1SSsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
+      <a href="https://github.com/petedprice" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="Peter_Price_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </p>
+    &copy; 2026 Peter Price. Built with plain HTML and hosted on GitHub Pages.
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const list = document.getElementById('navList');
+  toggle.addEventListener('click', () => {
+    const open = list.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  list.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    list.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
